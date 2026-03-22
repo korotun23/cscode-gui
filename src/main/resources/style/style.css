@@ -35,6 +35,11 @@
     -fx-border-width: 0 0 1 0;
 }
 
-.check-box{
+.button{
+    -fx-background-color: #3c7dce;
+    -fx-color-label-visible: #ffffff;
+}
 
+.button:hover{
+    -fx-background-color: #0a4c86;
 }
