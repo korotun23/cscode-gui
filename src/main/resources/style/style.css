@@ -1,0 +1,40 @@
+.parent{
+    -fx-background-color: #e8e5df;
+}
+.sidebar{
+    -fx-background-color: #0a4c86;
+}
+.menu-button{
+    -fx-background-color: #0a4c86;
+    -fx-background-radius: 0px;
+    -fx-border-style: solid;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0 0 1 0;
+    -fx-alignment: left;
+    -fx-padding: 15px;
+}
+
+.menu-button:hover{
+    -fx-background-color: #3c7dce;
+}
+
+.module-title{
+    -fx-background-color: #3c7dce;
+    -fx-color-label-visible: #ffffff;
+}
+
+.sub-module{
+    -fx-background-color: #ffffff;
+}
+
+.combo-box, .text-field{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0px;
+    -fx-border-style: solid;
+    -fx-border-color: #3c7dce;
+    -fx-border-width: 0 0 1 0;
+}
+
+.check-box{
+
+}
