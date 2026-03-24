@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" styleClass="parent" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" styleClass="parent" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cscode.gui.controller.CscodeApplicationController">
    <left>
       <AnchorPane prefHeight="600.0" prefWidth="185.0" styleClass="sidebar" BorderPane.alignment="CENTER">
          <children>
@@ -31,7 +31,7 @@
                         <Image url="@assets/Logo%20CsCode.png" />
                      </image>
                   </ImageView>
-                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="221.0" styleClass="menu-button" text="Barcode generator" textFill="WHITE">
+                  <Button fx:id="buttonMenuBarcodeGenerator" mnemonicParsing="false" prefHeight="51.0" prefWidth="221.0" styleClass="menu-button" text="Barcode generator" textFill="WHITE">
                      <font>
                         <Font name="Ubuntu Sans Regular" size="14.0" />
                      </font>
@@ -39,17 +39,17 @@
                         <Insets top="50.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="230.0" styleClass="menu-button" text="File generator" textFill="WHITE">
+                  <Button fx:id="buttonMenuFileGenerator" mnemonicParsing="false" prefHeight="51.0" prefWidth="230.0" styleClass="menu-button" text="File generator" textFill="WHITE">
                      <font>
                         <Font name="Ubuntu Sans Regular" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="240.0" styleClass="menu-button" text="Models" textFill="WHITE">
+                  <Button fx:id="buttonMenuModel" mnemonicParsing="false" prefHeight="51.0" prefWidth="240.0" styleClass="menu-button" text="Models" textFill="WHITE">
                      <font>
                         <Font name="Ubuntu Sans Regular" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="267.0" styleClass="menu-button" text="Settings" textFill="WHITE">
+                  <Button fx:id="buttonMenuSettings" mnemonicParsing="false" prefHeight="51.0" prefWidth="267.0" styleClass="menu-button" text="Settings" textFill="WHITE">
                      <font>
                         <Font name="Ubuntu Sans Regular" size="14.0" />
                      </font>
@@ -105,9 +105,9 @@
                           </rowConstraints>
                            <children>
                               <Label text="Barcode Type :" />
-                              <ComboBox prefHeight="26.0" prefWidth="377.0" GridPane.columnIndex="1" />
+                              <ComboBox fx:id="comboBarcodeType" prefHeight="26.0" prefWidth="377.0" GridPane.columnIndex="1" />
                               <Label text="Image format :" GridPane.rowIndex="1" />
-                              <ComboBox prefHeight="26.0" prefWidth="377.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="comboImageType" prefHeight="26.0" prefWidth="377.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                            <VBox.margin>
                               <Insets left="20.0" right="20.0" top="20.0" />
@@ -133,15 +133,15 @@
                                  </GridPane.margin>
                               </Label>
                               <Label text="Width :" GridPane.columnIndex="2" />
-                              <TextField GridPane.columnIndex="1">
+                              <TextField fx:id="fieldHeight" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets right="20.0" />
                                  </GridPane.margin>
                               </TextField>
-                              <TextField GridPane.columnIndex="3" />
+                              <TextField fx:id="fieldWidth" GridPane.columnIndex="3" />
                            </children>
                         </GridPane>
-                        <CheckBox mnemonicParsing="false" text="Display code value">
+                        <CheckBox fx:id="checkDisplayValue" mnemonicParsing="false" text="Display code value">
                            <VBox.margin>
                               <Insets left="20.0" top="30.0" />
                            </VBox.margin>
@@ -175,8 +175,8 @@
                            </rowConstraints>
                            <children>
                               <Label text="Select csv file :" />
-                              <TextField GridPane.columnIndex="1" />
-                              <Button mnemonicParsing="false" text="..." textFill="WHITE" GridPane.columnIndex="2">
+                              <TextField fx:id="fieldCsvFile" GridPane.columnIndex="1" />
+                              <Button fx:id="buttonCsvFile" mnemonicParsing="false" text="..." textFill="WHITE" GridPane.columnIndex="2">
                                  <GridPane.margin>
                                     <Insets left="20.0" />
                                  </GridPane.margin>
@@ -206,12 +206,12 @@
                                  </GridPane.margin>
                               </Label>
                               <Label prefHeight="17.0" prefWidth="142.0" text="Column name :" GridPane.columnIndex="2" />
-                              <ComboBox prefHeight="26.0" prefWidth="377.0" GridPane.columnIndex="1">
+                              <ComboBox fx:id="comboColumnData" prefHeight="26.0" prefWidth="377.0" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets right="20.0" />
                                  </GridPane.margin>
                               </ComboBox>
-                              <ComboBox prefHeight="26.0" prefWidth="162.0" GridPane.columnIndex="3" />
+                              <ComboBox fx:id="comboColumnName" prefHeight="26.0" prefWidth="162.0" GridPane.columnIndex="3" />
                            </children>
                         </GridPane>
                      </children>
@@ -243,8 +243,8 @@
                            </rowConstraints>
                            <children>
                               <Label text="Output dir. :" />
-                              <TextField GridPane.columnIndex="1" />
-                              <Button mnemonicParsing="false" text="..." textFill="WHITE" GridPane.columnIndex="2">
+                              <TextField fx:id="fieldOutputDir" GridPane.columnIndex="1" />
+                              <Button fx:id="buttonOutputDir" mnemonicParsing="false" text="..." textFill="WHITE" GridPane.columnIndex="2">
                                  <GridPane.margin>
                                     <Insets left="20.0" />
                                  </GridPane.margin>
@@ -270,7 +270,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="201.0" text="Generate barcodes" textFill="WHITE" GridPane.columnIndex="1">
+                              <Button fx:id="buttonGenerator" mnemonicParsing="false" prefHeight="85.0" prefWidth="201.0" text="Generate barcodes" textFill="WHITE" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets left="20.0" />
                                  </GridPane.margin>
@@ -278,7 +278,7 @@
                                     <Font size="15.0" />
                                  </font>
                               </Button>
-                              <ProgressBar prefHeight="58.0" prefWidth="300.0" progress="0.0" />
+                              <ProgressBar fx:id="progressBarGenerator" prefHeight="58.0" prefWidth="300.0" progress="0.0" />
                            </children>
                            <VBox.margin>
                               <Insets left="20.0" right="20.0" top="20.0" />
