@@ -2,7 +2,7 @@
     -fx-background-color: #e8e5df;
 }
 .sidebar{
-    -fx-background-color: #0a4c86;
+    -fx-background-color: #3c7dce;
 }
 .menu-button{
     -fx-background-color: #0a4c86;
@@ -15,11 +15,11 @@
 }
 
 .menu-button:hover{
-    -fx-background-color: #3c7dce;
+    -fx-background-color: #0a4c86;
 }
 
 .module-title{
-    -fx-background-color: #3c7dce;
+    -fx-background-color: #0a4c86;
     -fx-color-label-visible: #ffffff;
 }
 

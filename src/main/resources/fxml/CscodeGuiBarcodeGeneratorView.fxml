@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
@@ -17,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" styleClass="parent" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cscode.gui.controller.CscodeApplicationController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" styleClass="parent" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cscode.gui.controller.CscodeApplicationController">
    <left>
       <AnchorPane prefHeight="600.0" prefWidth="185.0" styleClass="sidebar" BorderPane.alignment="CENTER">
          <children>
@@ -28,7 +29,7 @@
                         <Insets bottom="30.0" left="35.0" top="35.0" />
                      </VBox.margin>
                      <image>
-                        <Image url="@assets/Logo%20CsCode.png" />
+                        <Image url="@../assets/Logo%20CsCode.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="buttonMenuBarcodeGenerator" mnemonicParsing="false" prefHeight="51.0" prefWidth="221.0" styleClass="menu-button" text="Barcode generator" textFill="WHITE">
@@ -188,8 +189,8 @@
                         </GridPane>
                         <GridPane>
                            <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="70.0" prefWidth="76.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="165.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="70.0" prefWidth="105.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="163.0" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="70.0" prefWidth="101.0" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="152.0" />
                            </columnConstraints>
@@ -293,4 +294,8 @@
             </VBox>
          </children></AnchorPane>
    </center>
+   <stylesheets>
+      <URL value="@../style/style.css" />
+      <URL value="@../style/style.css" />
+   </stylesheets>
 </BorderPane>
